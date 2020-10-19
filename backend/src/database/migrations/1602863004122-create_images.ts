@@ -3,7 +3,7 @@ import {MigrationInterface, QueryRunner, Table} from "typeorm";
 export class createImages1602846647324 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
-        queryRunner.createTable(new Table({
+        await queryRunner.createTable(new Table({
             name: 'images',
             columns: [
                 {
@@ -19,14 +19,14 @@ export class createImages1602846647324 implements MigrationInterface {
                     type: 'varchar',
                 },
                 {
-                    name: 'orphanages_id',
+                    name: 'orphanage_id',
                     type: 'integer',
                 }
             ],
             foreignKeys: [
                 {
                     name: 'ImageOrphanage',
-                    columnNames: ['orphanages_id'],
+                    columnNames: ['orphanage_id'],
                     referencedTableName: 'orpanages',
                     referencedColumnNames: ['id'],
                     onUpdate: 'CASCADE',
@@ -37,7 +37,7 @@ export class createImages1602846647324 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        queryRunner.dropTable('images');
+        await queryRunner.dropTable('images');
     }
 
 }
