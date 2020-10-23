@@ -27,7 +27,7 @@ export class createImages1602846647324 implements MigrationInterface {
                 {
                     name: 'ImageOrphanage',
                     columnNames: ['orphanage_id'],
-                    referencedTableName: 'orpanages',
+                    referencedTableName: 'orphanages',
                     referencedColumnNames: ['id'],
                     onUpdate: 'CASCADE',
                     onDelete: 'CASCADE',
