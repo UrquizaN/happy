@@ -6,7 +6,9 @@ import '../styles/pages/landing.css';
 
 import logoImg from '../images/logo.svg';
 
+
 function Landing(){
+    
     return (
         <div id="page-landing">
         <div className="content-wrapper">

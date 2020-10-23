@@ -1,12 +1,11 @@
-import React from "react";
+import React from 'react';
 import { Map, Marker, TileLayer } from 'react-leaflet';
-
 import { FiPlus } from "react-icons/fi";
 
 import Sidebar from "../components/Sidebar";
+import mapIcon from "../utils/mapIcon";
 
 import '../styles/pages/create-orphanage.css';
-import mapIcon from "../utils/mapIcon";
 
 
 export default function CreateOrphanage() {
